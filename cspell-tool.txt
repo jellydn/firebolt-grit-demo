@@ -256,3 +256,5 @@ yellowgreen
 nocheck
 lockb
 outdir
+marzano
+getgrit
