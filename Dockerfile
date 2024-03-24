@@ -20,7 +20,7 @@ RUN npm run css:generate
 RUN npm run build
 
 # copy production dependencies and source code into final image
-FROM node:20-alpine AS release
+FROM node:20.11.1-alpine AS release
 COPY --from=install /temp/dev/node_modules node_modules
 COPY --from=prerelease /usr/src/app/.firebolt .firebolt
 COPY --from=prerelease /usr/src/app/routes routes
