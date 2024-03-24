@@ -1,7 +1,7 @@
 ---
 title: No alert
 tags: ['code-quality', 'logging']
-level: warn
+level: error
 ---
 
 # No alert
@@ -10,7 +10,7 @@ level: warn
 engine marzano(0.1)
 language js
 
-`alert($_)` => ``
+`alert($_)`
 
 ```
 
