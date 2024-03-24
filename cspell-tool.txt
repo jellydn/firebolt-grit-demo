@@ -258,3 +258,5 @@ lockb
 outdir
 marzano
 getgrit
+stdlib
+no_prototype_builtins
