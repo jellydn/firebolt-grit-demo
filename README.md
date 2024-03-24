@@ -170,6 +170,7 @@ pre-commit install
 
 ## Resources
 
+- [Available Patterns | Grit](https://docs.grit.io/patterns)
 - [Firebolt](https://firebolt.dev/)
 - [Panda CLI - Panda CSS](https://panda-css.com/docs/installation/cli)
 - [Biome, toolchain of the web](https://biomejs.dev/)
