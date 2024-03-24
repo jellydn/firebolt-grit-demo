@@ -1,0 +1,16 @@
+version: 0.0.1
+patterns:
+  - name: github.com/getgrit/stdlib#no_console_log
+    tags: ["logging"]
+  - name: console_to_logger
+    tags: ["logging"]
+    description: Replace console with logger
+    level: warn
+    body: |
+      `console.$method($my_message)` => `logger.$method($my_message)` where {
+        $method <: or {
+          `log` => `info`,
+          `warn` => `warn`,
+          `error` => `error`
+        }
+      }
