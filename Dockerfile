@@ -1,4 +1,4 @@
-FROM node:20 AS base
+FROM node:20.11.1 AS base
 WORKDIR /usr/src/app
 
 # install dependencies into temp directory
