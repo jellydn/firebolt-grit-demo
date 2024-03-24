@@ -25,7 +25,7 @@ export function Nav({ links = [], css: cssProps = {} }) {
 			)}
 		>
 			{links.map((link, index) => (
-				<Link key={link.url} href={link.href}>
+				<Link key={link.href} href={link.href}>
 					<span
 						className={css({
 							color: "inherit",
