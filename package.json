@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@firebolt-dev/cors": "0.3.1",
+    "consola": "3.2.3",
     "firebolt": "0.3.1",
     "react": "18.3.0-canary-0066e0b68-20240306",
     "react-dom": "18.3.0-canary-0066e0b68-20240306"
