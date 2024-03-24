@@ -3,6 +3,10 @@
   <img alt="Version" src="https://img.shields.io/badge/version-0.3.1-blue.svg?cacheSeconds=2592000" />
 </p>
 
+>This project showcases how Grit, simple web app with Firebolt, can automate tasks like code migrations with Grit CLI or Github action. 
+
+[![IT Man - Automate Your Codebase: #GritQL &amp; The Future of Software Maintenance with #Grit](https://i.ytimg.com/vi/pRGxJRxCwII/hqdefault.jpg)](https://www.youtube.com/watch?v=pRGxJRxCwII)
+
 ## Pre-requisites
 
 - [Bun — A fast all-in-one JavaScript runtime](https://bun.sh/)
@@ -42,10 +46,87 @@ grit list
 grit check
 ```
 
+[![Grit Demo 1](https://i.gyazo.com/b63f67c598010a058995921d2415826f.gif)](https://gyazo.com/b63f67c598010a058995921d2415826f)
+
 ### Describe the pattern
 
 ```sh
 grit patterns describe <pattern>
+```
+
+For example, to describe the `no_console_log` pattern, you can run the following command:
+
+```sh
+grit patterns describe no_console_log
+
+# Remove console.log
+
+Remove `console.log` statements.
+
+- Name: no_console_log
+- Language: TSX
+- Tags: logging
+
+# Body
+
+engine marzano(0.1)
+language js
+
+`console.log($arg)` => . where {
+  $arg <: not within catch_clause()
+}
+
+# Samples
+
+## Removes a simple `console.log` statement
+
+Input                 | Output
+--------------------- | ---------------------
+// Do not remove this | // Do not remove this
+console.error('foo'); | console.error('foo');
+console.log('foo');   |
+--------------------- | ---------------------
+
+
+## Removes the statement in a function
+
+Input                 | Output
+--------------------- | ---------------
+function f() {        | function f() {}
+  console.log('foo'); |
+}                     |
+--------------------- | ---------------
+
+
+## Works in a list as well
+
+Input                                                               | Output
+------------------------------------------------------------------- | --------------------
+server.listen(PORT, console.log(`Server started on port ${PORT}`)); | server.listen(PORT);
+------------------------------------------------------------------- | --------------------
+
+
+## Doesn't remove `console.log` in a catch clause
+
+Input                 | Output
+--------------------- | ---------------------
+try {                 | try {
+} catch (e) {         | } catch (e) {
+  console.log('foo'); |   console.log('foo');
+}                     | }
+--------------------- | ---------------------
+
+
+## Works on multiple console logs in the same file
+
+Input                 | Output
+--------------------- | ---------------------
+// Do not remove this | // Do not remove this
+console.error('foo'); | console.error('foo');
+console.log('foo');   |
+console.log('bar');   |
+--------------------- | ---------------------
+
 ```
 
 ### Apply the pattern
@@ -54,10 +135,12 @@ grit patterns describe <pattern>
 grit apply <pattern>
 ```
 
+[![Grit Apply Demo](https://i.gyazo.com/e5c010fd20ccfaa7b1b489e956b6ba6c.gif)](https://gyazo.com/e5c010fd20ccfaa7b1b489e956b6ba6c)
+
 ### Edit the pattern with Grit Studio
 
 ```sh
-grit pattern edit
+grit pattern edit <pattern>
 ```
 
 For example, to edit the `no_alert_js` pattern, you can run the following command:
