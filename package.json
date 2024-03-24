@@ -1,0 +1,30 @@
+{
+  "name": "firebolt-grit-demo",
+  "version": "0.3.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "firebolt build",
+    "check": "biome check --apply .",
+    "css:generate": "panda",
+    "css:watch": "panda --watch",
+    "dev": "firebolt dev",
+    "lint": "biome lint .",
+    "prepare": "panda codegen",
+    "start": "firebolt start"
+  },
+  "dependencies": {
+    "@firebolt-dev/cors": "^0.3.1",
+    "firebolt": "0.3.1",
+    "react": "18.3.0-canary-0066e0b68-20240306",
+    "react-dom": "18.3.0-canary-0066e0b68-20240306"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.2",
+    "@pandacss/dev": "^0.36.1"
+  },
+  "overrides": {
+    "react": "18.3.0-canary-0066e0b68-20240306",
+    "react-dom": "18.3.0-canary-0066e0b68-20240306"
+  }
+}
