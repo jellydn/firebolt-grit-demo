@@ -26,6 +26,18 @@ bun run dev
 bun run build
 ```
 
+## Docker
+
+```sh
+docker-compose up
+```
+
+## Deploy to Fly.io
+
+```sh
+fly launch
+```
+
 ## Pre-commit
 
 ```sh

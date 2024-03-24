@@ -1,0 +1,22 @@
+# flyctl launch added from .gitignore
+**/.DS_Store
+**/.firebolt
+**/.env*
+!**/.env.example
+**/node_modules
+
+## Panda
+**/styled-system
+**/styled-system-studio
+
+# flyctl launch added from .grit/.gitignore
+.grit/**/.gritmodules*
+.grit/**/*.log
+
+# flyctl launch added from .grit/.gritmodules/github.com/getgrit/stdlib/.gitignore
+.grit/.gritmodules/github.com/getgrit/stdlib/**/.DS_Store
+
+# flyctl launch added from .grit/.gritmodules/github.com/getgrit/stdlib/.grit/.gitignore
+.grit/.gritmodules/github.com/getgrit/stdlib/.grit/**/.gritmodules
+.grit/.gritmodules/github.com/getgrit/stdlib/.grit/**/*.log
+fly.toml
