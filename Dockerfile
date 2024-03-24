@@ -7,7 +7,7 @@ FROM base AS install
 RUN mkdir -p /temp/dev
 COPY package.json bun.lockb panda.config.mjs /temp/dev/
 RUN npm install -g bun
-RUN cd /temp/dev && bun install 
+RUN cd /temp/dev && bun install
 
 # copy node_modules from temp directory
 # then copy all (non-ignored) project files into the image
@@ -20,7 +20,7 @@ RUN npm run css:generate
 RUN npm run build
 
 # copy production dependencies and source code into final image
-FROM base AS release
+FROM node:20-alpine AS release
 COPY --from=install /temp/dev/node_modules node_modules
 COPY --from=prerelease /usr/src/app/.firebolt .firebolt
 COPY --from=prerelease /usr/src/app/routes routes
