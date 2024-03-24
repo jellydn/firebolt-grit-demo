@@ -6,7 +6,9 @@
 ## Pre-requisites
 
 - [Bun — A fast all-in-one JavaScript runtime](https://bun.sh/)
+- [Grit CLI](https://docs.grit.io/cli/quickstart)
 - [pre-commit](https://pre-commit.com/)
+- [Docker](https://www.docker.com/) or [OrbStack](https://orbstack.dev/)
 
 ## Install
 
@@ -24,6 +26,45 @@ bun run dev
 
 ```sh
 bun run build
+```
+
+## [Grit](https://grit.io)
+
+### List all patterns
+
+```sh
+grit list
+```
+
+### Check the current pattern
+
+```sh
+grit check
+```
+
+### Describe the pattern
+
+```sh
+grit patterns describe <pattern>
+```
+
+### Apply the pattern
+
+```sh
+grit apply <pattern>
+```
+
+### Edit the pattern with Grit Studio
+
+```sh
+grit pattern edit
+```
+
+For example, to edit the `no_alert_js` pattern, you can run the following command:
+
+```sh
+grit patterns edit .grit/patterns/no_alert_js.md
+Open in Grit studio: https://app.grit.io/studio?pattern_file=eJyFkLFuAjEMhl%2FFCpWOk7ijrIfo0qVTp25NdbHASg%2FlnDYxrVrEu2MCQmxsyW9%2Fn2zvzTqyEIvpTNM0lmWQQB28RsBASTRAnzt4r9ZxQ833DsMgf9UMqhC9H9hXH5YD%2FVDo4BcTWy4Wy5MbhWXnnE%2BDPokVIhgx%2FSPH6WO7qJVH9jv0BNtcmgs2fehrB6sncO5iKNoJvFEWeMZMsLgURDFdQ%2BMxe1iBNS8UQrRmafns0rxeXiV3kNJlZuYL5VPP0p4mn%2BtHKHGec%2ByLs9%2FmdtyYwxHclHC9
 ```
 
 ## Docker
