@@ -4,7 +4,7 @@ import { css } from "../styled-system/css/index.mjs";
 
 /**
  * Text component
- * @param {React.ParamHTMLAttributes<HTMLParamElement>} props
+ * @param {React.ParamHTMLAttributes<HTMLElement>} props
  */
 export function Text(props) {
 	return (

@@ -1,8 +1,12 @@
 firebolt
+traefik
+Consola
+consola
 codegen
 biomejs
 pandacss
 Firebolt
+automerge
 csstype
 Hstack
 hstack
@@ -250,3 +254,5 @@ steelblue
 whitesmoke
 yellowgreen
 nocheck
+lockb
+outdir

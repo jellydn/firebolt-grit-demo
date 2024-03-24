@@ -1,3 +1,12 @@
+import React from "react";
+
+/**
+ * RootLayout.
+ *
+ * @param {Object} props - The properties passed to the component.
+ * @param {React.ReactNode} props.children - The child nodes.
+ * @returns {React.ReactElement} The rendered component.
+ */
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
