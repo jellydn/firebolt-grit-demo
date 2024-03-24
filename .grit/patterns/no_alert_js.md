@@ -4,8 +4,6 @@ tags: ['code-quality', 'logging']
 level: error
 ---
 
-# No alert
-
 ```grit
 engine marzano(0.1)
 language js
