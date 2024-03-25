@@ -6,6 +6,8 @@ import { Heading } from "@/components/Heading";
 import { Nav } from "@/components/Nav";
 import { Text } from "@/components/Text";
 
+import logger from "@/logger";
+
 export default function Home() {
 	return (
 		<Context>
@@ -35,7 +37,7 @@ margin: 10px;
 				</Text>
 			</div>
 
-			<Button onClick={() => alert("Hello there")}>Click me</Button>
+			<Button onClick={() => logger.info("Hello there")}>Click me</Button>
 		</Context>
 	);
 }
