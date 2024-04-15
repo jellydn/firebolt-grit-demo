@@ -21,7 +21,7 @@
     "react-dom": "18.3.0-next-fecc288b7-20221025"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.6.4",
+    "@biomejs/biome": "1.7.0",
     "@pandacss/dev": "0.37.2"
   },
   "overrides": {
