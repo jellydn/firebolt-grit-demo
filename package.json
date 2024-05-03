@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.2",
-    "@pandacss/dev": "0.38.0"
+    "@pandacss/dev": "0.39.0"
   },
   "overrides": {
     "react": "18.3.1",
