@@ -14,15 +14,15 @@
     "start": "firebolt start"
   },
   "dependencies": {
-    "@firebolt-dev/cors": "0.4.2",
+    "@firebolt-dev/cors": "0.4.3",
     "consola": "3.2.3",
-    "firebolt": "0.4.2",
+    "firebolt": "0.4.3",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
-    "@pandacss/dev": "0.43.0"
+    "@biomejs/biome": "1.9.4",
+    "@pandacss/dev": "0.47.0"
   },
   "overrides": {
     "react": "18.3.1",
