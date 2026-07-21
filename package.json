@@ -17,7 +17,7 @@
     "@firebolt-dev/cors": "0.4.2",
     "consola": "3.2.3",
     "firebolt": "0.4.2",
-    "react": "18.3.1",
+    "react": "19.2.8",
     "react-dom": "18.3.1"
   },
   "devDependencies": {
@@ -25,7 +25,7 @@
     "@pandacss/dev": "0.43.0"
   },
   "overrides": {
-    "react": "18.3.1",
+    "react": "19.2.8",
     "react-dom": "18.3.1"
   }
 }
